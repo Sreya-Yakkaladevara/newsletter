@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter sign-up Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="sign-up-card">
+        <div class="content">
+           <h1>Stay updated!</h1>
+           <p>Join 60,000+ product managers receiving monthly updates on</p>
+            <ul>
+                <li><i class='bx bxs-check-circle'></i>discovery and building what matters</li>
+                <li><i class='bx bxs-check-circle'></i>Measuring to ensure updates are a success</li>
+                <li><i class='bx bxs-check-circle'></i>And much more</li>
+            </ul>
+            <div class="email">
+               <form>
+                   <label>Email address<br><input type="email" placeholder="user@gmail.com"></label>
+                   <button type="submit">Subscribe to monthly newsletter</button>
+               </form>
+            </div>
+        </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBIFno1YesdwdyPQL4lGRalDzdeRkoAqoLNw&usqp=CAU">
+            
+        </div>
+    </div>
+    <div class="container hide">
+        <div class="popup">
+            <i class='bx bxs-check-circle'></i><br>
+            <h1>Thanks for subscribing!</h1>
+            <p>A conformation email has been sent to ash@company.com. Please open it and click the button inside to conform your submission</p>
+            <button type="submit">Dismiss message</button>
+
+        </div>
+    </div>
+<script>
+    let form = document.querySelector('form')
+    let card1 = document.querySelector('.sign-up-card')
+    let card2 = document.querySelector('.container')
+    let popup = document.querySelector('.popup')
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        card1.classList.add('hide');
+        card2.classList.remove('hide')
+        
+    });
+</script>
+</body>
+</html>
